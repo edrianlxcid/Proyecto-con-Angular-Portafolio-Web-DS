@@ -1,0 +1,48 @@
+<!-- src/app/pages/proyectos/proyectos.component.html -->
+<section class="proyectos-section text-white py-5">
+  <div class="container my-5">
+    <!-- Cuadro para el título "PORTAFOLIO" -->
+    <div class="title-box p-4 rounded shadow-lg bg-dark-custom border-custom text-center mx-auto mb-4">
+      <h1 class="display-4 fw-bold text-uppercase text-white mb-0">Portafolio</h1>
+    </div>
+
+    <!-- Cuadro para el subtítulo "Conoce nuestros proyectos" -->
+    <div class="subtitle-box p-3 rounded shadow-lg bg-dark-custom border-custom text-center mx-auto mb-5">
+      <p class="lead text-secondary-custom mb-0">Conoce nuestros proyectos</p>
+    </div>
+
+    <!-- Contenedor de Proyectos (Grid de Tarjetas) -->
+    <div class="row justify-content-center g-4 mb-5">
+      <div class="col-md-4 col-sm-6" *ngFor="let project of visibleProjects">
+        <div class="project-card card bg-dark-card text-white border-custom-light shadow-sm">
+          <img [src]="project.imageUrl" class="card-img-top border-custom-light rounded-top" [alt]="project.name">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">{{ project.name }}</h5>
+            <p class="card-text text-secondary-custom">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón "Ver más" - Solo se muestra si hay más proyectos por cargar -->
+    <div class="text-center mb-5" *ngIf="showLoadMoreButton">
+      <button class="btn btn-primary-custom btn-lg rounded-pill px-5 py-3" (click)="loadMoreProjects()">Ver más</button>
+    </div>
+
+        <!-- ...existing code... -->
+        <!-- Sección de YouTube (ajustada) -->
+        <div class="youtube-section text-center py-4 my-3"> <!-- Cambia my-5 por my-3 -->
+          <div class="video-responsive">
+            <iframe
+              src="https://www.youtube.com/embed/b_8NRD9d7QU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+    <!-- ...existing code... -->
+  </div>
+</section>

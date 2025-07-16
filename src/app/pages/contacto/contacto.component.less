@@ -1,0 +1,194 @@
+/* src/app/pages/contacto/contacto.component.less */
+
+// Reutilizamos las variables de color del tema general
+@primary-accent: #8A2BE2; // Púrpura/violeta para acentos
+@secondary-text: #b0b0b0; // Gris claro para texto secundario
+@background-main: #0a0a1a; // Fondo principal más oscuro
+@background-section-light: rgba(26, 10, 58, 0.3); // Fondo para secciones (semi-transparente)
+@border-main: #3a0a6a; // Borde principal oscuro
+@border-light: #5a0a9a; // Borde más claro para elementos pequeños
+
+.contacto-section {
+  background-color: transparent; // Sigue siendo transparente para el degradado principal
+  min-height: calc(100vh - 120px); /* Ajusta la altura mínima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contacto-section .container {
+  max-width: 1200px;
+  background-color: transparent; /* Fondo transparente */
+  border: none !important; /* Sin borde */
+  border-radius: 0; /* Sin bordes redondeados */
+  padding: 0 !important; /* Eliminamos el padding del contenedor principal */
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* Título "Contáctanos" a blanco */
+}
+
+/* Clases de texto personalizadas (reutilizadas) */
+.text-primary-custom {
+  color: @primary-accent !important;
+}
+
+.text-secondary-custom {
+  color: @secondary-text !important;
+}
+
+.bg-dark-custom {
+  background-color: @background-section-light !important;
+}
+
+.bg-dark-card {
+  background-color: @background-main !important;
+}
+
+.border-custom {
+  border: 1px solid @border-main !important;
+}
+
+.border-custom-light {
+  border: 1px solid @border-light !important;
+}
+
+/* Contenedor de la imagen de cabecera de Contacto */
+.contact-header-image-container {
+  margin-bottom: 3rem; /* Espacio debajo de la imagen */
+}
+
+.contact-header-image-container img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+
+/* Estilos para las tarjetas de contacto */
+.contact-card {
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.contact-card img {
+  width: 80px; /* ¡CAMBIO CLAVE! Tamaño fijo para desktop y tablets */
+  height: 80px; /* ¡CAMBIO CLAVE! Tamaño fijo para desktop y tablets */
+  border: 3px solid @primary-accent !important;
+  object-fit: cover;
+  margin: 0 auto; /* Asegura que la imagen esté centrada horizontalmente */
+}
+
+.contact-card .card-title {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-card .card-text {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card .card-text i {
+  font-size: 1.2rem;
+}
+
+.contact-card .social-links a {
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.contact-card .social-links a:hover {
+  color: @primary-accent;
+}
+
+/* Estilos para la sección de Preguntas Frecuentes (FAQ) */
+.faq-section {
+  padding: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.faq-section h2 {
+  color: #ffffff; /* Título "Preguntas Frecuentes" a blanco */
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.accordion-item {
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+  margin-bottom: 1rem !important;
+  border: 1px solid @border-light !important;
+}
+
+.accordion-button {
+  background-color: @background-section-light !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: darken(@background-section-light, 5%) !important;
+  color: @primary-accent !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-body {
+  background-color: @background-main !important;
+  color: @secondary-text !important;
+  padding: 1.25rem;
+  border-top: 1px solid @border-light;
+}
+
+// Media Queries para responsividad
+@media (max-width: 768px) {
+  .contacto-section h1 {
+    font-size: 2.5rem;
+  }
+  .contact-card {
+    margin-bottom: 1.5rem;
+  }
+  .contact-header-image-container img {
+    height: 150px;
+  }
+  .contact-card img {
+    width: 60px !important; /* Ajuste para móviles */
+    height: 60px !important;
+  }
+}

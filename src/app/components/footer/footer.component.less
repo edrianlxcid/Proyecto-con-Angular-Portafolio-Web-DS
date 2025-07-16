@@ -1,0 +1,59 @@
+/* src/app/components/footer/footer.component.less */
+
+// Definición de colores base basados en el boceto
+@footer-bg: #1a0a3a; // Fondo del footer
+@footer-border: #3a0a6a; // Borde del footer
+@link-color: #e0e0e0; // Color de texto de enlaces
+@primary-accent: #8A2BE2; // Púrpura/violeta para iconos al pasar el mouse
+@logo-green: #4CAF50; // Verde específico para el logo "DS"
+
+.footer {
+  background-color: @footer-bg !important;
+  border-top: 3px solid @footer-border;
+  color: @link-color;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: @link-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer .text-success {
+  color: @logo-green !important; // Asegura que el logo "DS" sea verde
+}
+
+.social-icons .bi {
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .bi:hover {
+  color: @primary-accent; // Iconos de redes sociales en púrpura/violeta al pasar el mouse
+  transform: scale(1.1);
+}
+
+/* Asegura que el footer se mantenga en la parte inferior */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}

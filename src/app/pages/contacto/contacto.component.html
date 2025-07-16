@@ -1,0 +1,134 @@
+<!-- src/app/pages/contacto/contacto.component.html -->
+<section class="contacto-section text-white py-5">
+  <div class="container my-5">
+    <!-- Imagen de Cabecera para Contacto -->
+    <div class="contact-header-image-container text-center mb-5">
+      <img src="assets/imagenes/contactos.jpg" alt="Imagen de Contacto" class="img-fluid rounded shadow-lg border-custom">
+    </div>
+
+    <h1 class="display-4 fw-bold text-uppercase text-center mb-5">Contáctanos</h1> <!-- ¡CAMBIO CLAVE: Eliminado text-primary-custom! -->
+
+    <!-- Sección de Tarjetas de Contacto -->
+    <div class="row justify-content-center g-4 mb-5">
+      <!-- Tarjeta de Contacto 1 -->
+      <div class="col-md-6 col-sm-8 mb-4">
+        <div class="contact-card card bg-dark-card text-white border-custom-light shadow-sm">
+          <div class="card-body text-center py-4">
+            <img src="assets/imagenes/fotoadrian.jpg" alt="Contacto 1" class="img-fluid rounded-circle mb-4 border-primary-custom border-3">
+            <h5 class="card-title text-white mb-3">Kevin Adrian Quiñonez Rocha</h5>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-envelope-fill me-2"></i> kadrianrocha@gmail.com
+            </p>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-telephone-fill me-2"></i> +593 963003767
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta de Contacto 2 -->
+      <div class="col-md-6 col-sm-8 mb-4">
+        <div class="contact-card card bg-dark-card text-white border-custom-light shadow-sm">
+          <div class="card-body text-center py-4">
+            <img src="assets/imagenes/fotojudith.jpg" alt="Contacto 2" class="img-fluid rounded-circle mb-4 border-primary-custom border-3">
+            <h5 class="card-title text-white mb-3">Judith Mercedes Piedra </h5>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-envelope-fill me-2"></i> correo2@example.com
+            </p>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-telephone-fill me-2"></i> +593 99 765 4321
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nueva Tarjeta de Contacto 3 -->
+      <div class="col-md-6 col-sm-8 mb-4">
+        <div class="contact-card card bg-dark-card text-white border-custom-light shadow-sm">
+          <div class="card-body text-center py-4">
+            <img src="assets/imagenes/fotoemily.jpg" alt="Contacto 3" class="img-fluid rounded-circle mb-4 border-primary-custom border-3">
+            <h5 class="card-title text-white mb-3">Nombre Contacto 3</h5>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-envelope-fill me-2"></i> correo3@example.com
+            </p>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-telephone-fill me-2"></i> +593 99 111 2222
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nueva Tarjeta de Contacto 4 -->
+      <div class="col-md-6 col-sm-8 mb-4">
+        <div class="contact-card card bg-dark-card text-white border-custom-light shadow-sm">
+          <div class="card-body text-center py-4">
+            <img src="https://placehold.co/120x120/3a0a6a/FFFFFF?text=Persona4" alt="Contacto 4" class="img-fluid rounded-circle mb-4 border-primary-custom border-3">
+            <h5 class="card-title text-white mb-3">Nombre Contacto 4</h5>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-envelope-fill me-2"></i> correo4@example.com
+            </p>
+            <p class="card-text text-secondary-custom mb-3">
+              <i class="bi bi-telephone-fill me-2"></i> +593 99 333 4444
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="text-secondary-custom mx-2"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Preguntas Frecuentes (FAQ) -->
+    <div class="faq-section py-4 my-5 rounded shadow-lg bg-dark-custom border-custom">
+      <h2 class="mb-4 text-center">Preguntas Frecuentes</h2> <!-- ¡CAMBIO CLAVE: Eliminado text-primary-custom! -->
+      <div class="accordion accordion-flush" id="faqAccordion">
+        <div class="accordion-item bg-dark-card border-custom-light mb-2 rounded">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed bg-dark-card text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              ¿Cuál es su proceso de desarrollo?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary-custom">
+              Nuestro proceso de desarrollo incluye fases de planificación, diseño, implementación, pruebas y despliegue, asegurando un producto de alta calidad.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-dark-card border-custom-light mb-2 rounded">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed bg-dark-card text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ¿Qué tecnologías utilizan?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary-custom">
+              Trabajamos con una amplia gama de tecnologías, incluyendo Angular, React, Node.js, Python, bases de datos SQL y NoSQL, entre otras.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-dark-card border-custom-light mb-2 rounded">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed bg-dark-card text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              ¿Ofrecen servicios de mantenimiento post-lanzamiento?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary-custom">
+              Sí, ofrecemos planes de mantenimiento y soporte continuo para asegurar que su aplicación funcione sin problemas y se mantenga actualizada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

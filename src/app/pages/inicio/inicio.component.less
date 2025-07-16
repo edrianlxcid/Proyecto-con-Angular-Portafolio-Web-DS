@@ -1,0 +1,273 @@
+/* src/app/pages/inicio/inicio.component.less */
+
+// Definición de colores base basados en el boceto
+@primary-accent: #8A2BE2;
+@secondary-text: #b0b0b0;
+@background-main: #0a0a1a;
+@background-section-light: rgba(26, 10, 58, 0.3); // Fondo para secciones (semi-transparente)
+@border-main: #3a0a6a;
+@border-light: #5a0a9a;
+
+.inicio-section {
+  background-color: transparent;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.inicio-section .container {
+  max-width: 1200px;
+}
+
+// Clases de texto personalizadas
+.text-primary-custom {
+  color: @primary-accent !important; // Mantenemos esta clase para otros usos si es necesario
+}
+
+.text-secondary-custom {
+  color: @secondary-text !important;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+// Clases de fondo personalizadas
+.bg-dark-custom {
+  background-color: @background-section-light !important;
+}
+
+.bg-dark-card {
+  background-color: @background-main !important;
+}
+
+// Clases de borde personalizadas
+.border-custom {
+  border: 1px solid @border-main !important;
+}
+
+.border-custom-light {
+  border: 1px solid @border-light !important;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* ¡CAMBIO CLAVE! Título "PORTAFOLIO" a blanco */
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.fs-5 {
+  font-size: 1.15rem !important;
+}
+
+/* Estilos para el cuadro de texto introductorio */
+.intro-text-box {
+  padding: 2.5rem !important;
+  max-width: 500px;
+  text-align: left !important;
+}
+
+/* Contenedor del Carrusel de Hackathon */
+.hackathon-carousel-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.hackathon-carousel-container .carousel-inner {
+  border: none !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+
+.hackathon-carousel-container .carousel-item img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+  border: none !important;
+}
+
+.hackathon-carousel-container .carousel-control-prev-icon,
+.hackathon-carousel-container .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* NUEVA SECCIÓN: Explora Proyectos */
+.explore-projects-section {
+  padding: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.explore-projects-section .fs-4 {
+  font-size: 1.5rem !important;
+  line-height: 1.6;
+}
+
+.explore-projects-section .btn {
+  font-size: 1.1rem;
+  padding: 0.8rem 2.5rem;
+}
+
+/* Sección de Herramientas y Colaboradores */
+.tools-section,
+.collaborators-section {
+  padding: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.tools-section h2 {
+  color: #ffffff; /* ¡CAMBIO CLAVE! Título "Herramientas y Tecnologías" a blanco */
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.collaborators-section h2 {
+  color: #ffffff; /* ¡CAMBIO CLAVE! Título "Colaboradores" a blanco */
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tool-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border: 2px solid @border-main;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 5px;
+}
+
+.tool-icon:hover {
+  transform: scale(1.1);
+  border-color: @primary-accent;
+}
+
+/* Estilos para las tarjetas de colaboradores */
+.collaborators-section .card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaborators-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.collaborators-section .card img {
+  border: 3px solid @primary-accent !important;
+  object-fit: cover;
+}
+
+.collaborators-section .card-title {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.collaborators-section .card-text {
+  font-size: 0.95rem;
+}
+
+.collaborators-section .social-links a {
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.collaborators-section .social-links a:hover {
+  color: @primary-accent;
+}
+
+// Media Queries para responsividad (ajustes finos)
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .tool-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .collaborators-section .card {
+    margin-bottom: 1.5rem;
+  }
+  .intro-text-box {
+    padding: 1.5rem !important;
+    max-width: 100%;
+    text-align: center !important;
+  }
+  .hackathon-carousel-container .carousel-item img {
+    height: 250px;
+  }
+  .explore-projects-section .fs-4 {
+    font-size: 1.2rem !important;
+  }
+  .explore-projects-section .btn {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+  }
+}
+/* Estilos para las tarjetas de colaboradores */
+.collaborators-section .card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaborators-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.collaborators-section .card img {
+  width: 80px; /* Tamaño fijo para desktop y tablets */
+  height: 80px; /* Tamaño fijo para desktop y tablets */
+  border: 3px solid @primary-accent !important; /* Ahora @primary-accent debería estar definido */
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.collaborators-section .card-title {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.collaborators-section .card-text {
+  font-size: 0.95rem;
+}
+
+.collaborators-section .social-links a {
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.collaborators-section .social-links a:hover {
+  color: @primary-accent;
+}
+
+// Media Queries para responsividad
+@media (max-width: 768px) {
+  // ... (otras reglas) ...
+  .collaborators-section .card img {
+    width: 60px !important; /* Mantiene el ajuste para móviles */
+    height: 60px !important;
+  }
+}

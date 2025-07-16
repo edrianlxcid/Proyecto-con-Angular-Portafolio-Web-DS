@@ -1,0 +1,35 @@
+<!-- src/app/components/footer/footer.component.html -->
+<footer class="footer bg-dark text-white-50 py-4 shadow-lg mt-auto">
+  <div class="container-fluid text-center">
+    <div class="row align-items-center">
+      <!-- Columna del Logo y Nombre -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <a class="d-inline-flex align-items-center text-decoration-none" routerLink="/inicio">
+          <!-- Placeholder para el logo "DS Desarrollo de Software" -->
+          <img src="assets/imagenes/ds_logo-removebg-preview.png" alt="Logo DS" class="me-2 rounded-circle" style="height: 50px;">
+          
+        </a>
+      </div>
+
+      <!-- Columna de Redes Sociales -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank" class="text-white-50 mx-2">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="text-white-50 mx-2">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white-50 mx-2">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna de Derechos de Autor -->
+      <div class="col-md-4 text-md-end">
+        <p class="mb-0">&copy; {{ currentYear }} DS Desarrollo de Software. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>

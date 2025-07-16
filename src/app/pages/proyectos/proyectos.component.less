@@ -1,0 +1,212 @@
+/* src/app/pages/proyectos/proyectos.component.less */
+
+@import "../../styles/variables.less"; // Importa las variables globales
+
+.proyectos-section {
+  background-color: transparent; // Fondo transparente para que se vea el degradado del main
+  min-height: calc(100vh - 120px); /* Ajusta la altura mínima */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.proyectos-section .container {
+  max-width: 1200px;
+  background-color: transparent; /* Fondo transparente */
+  border: none !important; /* Sin borde */
+  border-radius: 0; /* Sin bordes redondeados */
+  padding: 0 !important; /* Eliminamos el padding del contenedor principal */
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* Clases de texto personalizadas (reutilizadas de inicio) */
+.text-primary-custom {
+  color: @primary-accent !important;
+}
+
+.text-secondary-custom {
+  color: @secondary-text !important;
+}
+
+.bg-dark-custom {
+  background-color: @background-section-light !important;
+}
+
+.bg-dark-card {
+  background-color: @background-main !important;
+}
+
+.border-custom {
+  border: 1px solid @border-main !important;
+}
+
+.border-custom-light {
+  border: 1px solid @border-light !important;
+}
+
+/* Estilos para el cuadro del título "PORTAFOLIO" */
+.title-box {
+  max-width: 400px;
+  padding: 1.5rem !important;
+}
+
+/* Estilos para el cuadro del subtítulo "Conoce nuestros proyectos" */
+.subtitle-box {
+  max-width: 500px;
+  padding: 1rem !important;
+}
+
+/* Estilos para las tarjetas de proyectos */
+.project-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out forwards; /* Animación de fade-in al cargar */
+  opacity: 0; /* Inicialmente invisible para la animación */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.project-card .card-img-top {
+  border-bottom: 1px solid @border-light;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+.project-card .card-body {
+  padding: 1.5rem;
+}
+
+.project-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.project-card .card-text {
+  font-size: 0.9rem;
+}
+
+/* Estilos para el botón "Ver más" */
+.btn-primary-custom {
+  background-color: @primary-accent !important;
+  border-color: @primary-accent !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: darken(@primary-accent, 10%) !important;
+  transform: translateY(-2px);
+}
+
+/* ESTILOS PARA LA SECCIÓN DE YOUTUBE */
+.youtube-section-red-box {
+  background-color: transparent !important; /* Fondo transparente */
+  padding: 0 !important; /* Elimina el padding para que el video llene la caja */
+  margin-top: 0 !important; /* Elimina el margen superior */
+  margin-bottom: 3rem;
+  border-radius: 0; /* Sin bordes redondeados */
+  border: none !important; /* Sin borde */
+  box-shadow: none !important; /* Sin sombra */
+  overflow: hidden; /* Asegura que el video no se salga de los bordes */
+  width: 90vw; /* ¡CAMBIO CLAVE! Usa 90% del ancho del viewport */
+  max-width: 1200px; /* Limita el ancho máximo para pantallas muy grandes */
+  margin-left: auto; /* Centra el bloque */
+  margin-right: auto; /* Centra el bloque */
+}
+
+.youtube-section-red-box .embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.youtube-section-red-box .embed-responsive::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* Relación de aspecto 16:9 (altura / ancho) */
+}
+
+.youtube-section-red-box .embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none !important; /* Elimina el borde del iframe */
+}
+
+/* Definición de la animación fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Empieza un poco más abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición normal */
+  }
+}
+
+// Media Queries para responsividad
+@media (max-width: 768px) {
+  .proyectos-section h1 {
+    font-size: 2.5rem;
+  }
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+  .title-box {
+    max-width: 100%;
+    padding: 1rem !important;
+  }
+  .subtitle-box {
+    max-width: 100%;
+    padding: 0.8rem !important;
+  }
+  .youtube-section-red-box {
+    padding: 0 !important;
+    width: 100vw; /* En móviles, que ocupe todo el ancho disponible */
+  }
+}
+
+// filepath: c:\Users\kadri\proyectodiseno\src\app\pages\proyectos\proyectos.component.less
+.video-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 700px; // Ajusta el ancho máximo según tu preferencia
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-responsive iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

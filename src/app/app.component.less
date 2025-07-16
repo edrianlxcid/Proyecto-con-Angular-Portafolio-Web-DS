@@ -1,0 +1,68 @@
+/* src/app/app.component.less */
+
+// Colores globales para el fondo de la aplicación
+@gradient-top-left: #0a0a1a; // Tono muy oscuro para la parte superior izquierda
+@gradient-mid-purple: #3a0a6a; // Tono de púrpura/violeta en el medio
+@gradient-bottom-right: #8A2BE2; // Púrpura/magenta brillante para la parte inferior derecha
+
+@logo-green: #4CAF50; // Verde específico para el logo "DS"
+@primary-accent: #8A2BE2; // Púrpura/violeta para acentos (reutilizado de otros componentes)
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: @gradient-top-left; // Fondo de respaldo
+  color: #ffffff;
+  border: 0 !important;
+  outline: 0 !important;
+  overflow-x: hidden;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 70px;
+  // Nuevo degradado diagonal
+  background: linear-gradient(
+    135deg, // Ángulo diagonal: de la parte superior izquierda a la inferior derecha
+    @gradient-top-left 0%,        // Comienza oscuro en la esquina superior izquierda
+    @gradient-mid-purple 50%,     // Pasa por un tono de púrpura en el centro
+    @gradient-bottom-right 100%   // Termina en el púrpura/magenta brillante en la esquina inferior derecha
+  ) !important;
+  background-size: cover;
+  background-attachment: fixed;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+// Estilos para el scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @primary-accent;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lighten(@primary-accent, 10%);
+}
+
+// Ajustes para el color del logo "DS" en el navbar y footer
+.text-success {
+  color: @logo-green !important;
+}
