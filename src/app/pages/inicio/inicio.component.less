@@ -62,8 +62,8 @@ h1 {
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.8rem; // Más grande que el valor actual
+  font-weight: 700; // Cambia a negrita
 }
 
 .fs-5 {
@@ -75,6 +75,10 @@ h1 {
   padding: 2.5rem !important;
   max-width: 500px;
   text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Contenedor del Carrusel de Hackathon */
@@ -108,6 +112,59 @@ h1 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 0.5rem;
+
+  .explore-metallic-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(90deg, #bfc1c2 0%, #e0e0e0 50%, #7a7a7a 100%);
+    color: #bfc1c2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: justify;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(120,120,120,0.3);
+    margin-bottom: 2rem;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-primary-custom {
+    background: transparent !important;
+    color: #bfc1c2 !important;
+    border: 2px solid #bfc1c2 !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 2rem;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 8px rgba(120,120,120,0.15);
+  }
+
+  .btn-primary-custom:hover,
+  .btn-primary-custom:focus {
+    background: #bfc1c2 !important;
+    color: #222 !important;
+    border-color: #bfc1c2 !important;
+    box-shadow: 0 4px 16px rgba(120,120,120,0.25);
+  }
+
+  .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .explore-metallic-text {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .explore-projects-section .fs-4 {
@@ -171,8 +228,11 @@ h1 {
 }
 
 .collaborators-section .card img {
-  border: 3px solid @primary-accent !important;
+  width: 80px; /* Tamaño fijo para desktop y tablets */
+  height: 80px; /* Tamaño fijo para desktop y tablets */
+  border: 3px solid @primary-accent !important; /* Ahora @primary-accent debería estar definido */
   object-fit: cover;
+  margin: 0 auto;
 }
 
 .collaborators-section .card-title {
@@ -192,6 +252,57 @@ h1 {
 
 .collaborators-section .social-links a:hover {
   color: @primary-accent;
+}
+
+/* NUEVO: Estilos para el texto metálico */
+.metallic-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metallic-text {
+  font-style: italic;
+  font-size: 3rem; // Aumenta el tamaño de la letra
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(90deg, #bfc1c2 0%, #e0e0e0 50%, #7a7a7a 100%);
+  color: #bfc1c2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(120,120,120,0.2);
+}
+
+/* Estilos para el cuadro de texto introductorio */
+.intro-text-box .lead {
+  font-weight: 700;
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #bfc1c2 0%, #e0e0e0 50%, #7a7a7a 100%);
+  color: #bfc1c2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: justify !important;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(120,120,120,0.2);
+}
+
+/* NUEVO: Estilos para el texto metálico en la sección de proyectos */
+.explore-metallic-text {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(90deg, #bfc1c2 0%, #e0e0e0 50%, #7a7a7a 100%);
+  color: #bfc1c2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: justify;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(120,120,120,0.2);
 }
 
 // Media Queries para responsividad (ajustes finos)
@@ -224,48 +335,6 @@ h1 {
     font-size: 1rem;
     padding: 0.6rem 2rem;
   }
-}
-/* Estilos para las tarjetas de colaboradores */
-.collaborators-section .card {
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.collaborators-section .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4) !important;
-}
-
-.collaborators-section .card img {
-  width: 80px; /* Tamaño fijo para desktop y tablets */
-  height: 80px; /* Tamaño fijo para desktop y tablets */
-  border: 3px solid @primary-accent !important; /* Ahora @primary-accent debería estar definido */
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-.collaborators-section .card-title {
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.collaborators-section .card-text {
-  font-size: 0.95rem;
-}
-
-.collaborators-section .social-links a {
-  font-size: 1.6rem;
-  transition: color 0.3s ease;
-}
-
-.collaborators-section .social-links a:hover {
-  color: @primary-accent;
-}
-
-// Media Queries para responsividad
-@media (max-width: 768px) {
-  // ... (otras reglas) ...
   .collaborators-section .card img {
     width: 60px !important; /* Mantiene el ajuste para móviles */
     height: 60px !important;

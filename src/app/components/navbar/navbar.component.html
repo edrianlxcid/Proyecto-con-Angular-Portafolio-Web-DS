@@ -3,10 +3,10 @@
 <nav class="navbar navbar-expand-lg" [ngClass]="{'transparent-navbar': isTransparent}">
   <div class="container-fluid">
     <!-- Logo y Nombre de la Empresa -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/inicio">
+    <a class="navbar-brand" (click)="navegarYScroll('/inicio')" style="cursor:pointer;">
       <!-- Placeholder para el logo "DS Desarrollo de Software" -->
       <!-- Puedes reemplazar esta imagen con tu logo real. Asegúrate de que la ruta sea correcta. -->
-      <img src="assets/imagenes/ds_logo-removebg-preview.png" alt="Logo DS" class="me-2 rounded-circle" style="height: 50px;">
+      <img src="assets/imagenes/ds_logo-removebg-preview.png" alt="Logo DS" height="40">
     </a>
 
     <!-- Botón Toggler para dispositivos móviles -->
@@ -18,13 +18,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+          <a class="nav-link" (click)="navegarYScroll('/inicio')">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/proyectos" routerLinkActive="active">Proyectos</a>
+          <a class="nav-link" (click)="navegarYScroll('/proyectos')">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+          <a class="nav-link" (click)="navegarYScroll('/contacto')">Contacto</a>
         </li>
       </ul>
     </div>

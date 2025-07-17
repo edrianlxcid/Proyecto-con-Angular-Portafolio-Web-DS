@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { TerminosComponent } from './pages/terminos/terminos.component';
 
 // Define tus rutas
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'terminos', component: TerminosComponent },
   { path: '**', redirectTo: '/inicio' } // Redirige cualquier ruta no encontrada a /inicio
 ];
 

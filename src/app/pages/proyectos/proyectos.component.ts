@@ -20,15 +20,15 @@ export class ProyectosComponent implements OnInit {
   ngOnInit(): void {
     // Inicializa tus proyectos aquí. Puedes añadir más propiedades como 'description', 'link', etc.
     this.allProjects = [
-      { id: 1, name: 'Proyecto 1', description: 'Descripción breve del proyecto 1, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+1' },
-      { id: 2, name: 'Proyecto 2', description: 'Descripción breve del proyecto 2, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+2' },
-      { id: 3, name: 'Proyecto 3', description: 'Descripción breve del proyecto 3, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+3' },
-      { id: 4, name: 'Proyecto 4', description: 'Descripción breve del proyecto 4, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+4' },
-      { id: 5, name: 'Proyecto 5', description: 'Descripción breve del proyecto 5, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+5' },
-      { id: 6, name: 'Proyecto 6', description: 'Descripción breve del proyecto 6, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+6' },
-      { id: 7, name: 'Proyecto 7', description: 'Descripción breve del proyecto 7, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+7' },
-      { id: 8, name: 'Proyecto 8', description: 'Descripción breve del proyecto 8, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+8' },
-      { id: 9, name: 'Proyecto 9', description: 'Descripción breve del proyecto 9, tecnologías usadas, etc.', imageUrl: 'https://placehold.co/400x250/1a0a3a/FFFFFF?text=Proyecto+9' },
+      { id: 1, name: 'Base de Datos', description: 'Mediante PostgreSQL, usando triggers y procedimeintos almacenados para rastrear cambios.', imageUrl: 'assets/imagenes/database.jpg' },
+      { id: 2, name: 'Desarrollo Web', description: 'Landing pages interactivas con diseño web responsive con funcionalidades dinámicas.', imageUrl: 'assets/imagenes/desarrollo_web.jpg' },
+      { id: 3, name: 'Redes y comunicación de datos.', description: 'Automatización de flujos de trabajo con integración de tareas repetitivas con n8n y máquinas virtuales.', imageUrl: 'assets/imagenes/redesycomunica.jpg' },
+      { id: 4, name: 'Entrono de desarollo multiplataforma', description: 'VMs con distintos sistemas operativos ( Linux, Windows, FreeBSD).', imageUrl: 'assets/imagenes/vm.png' },
+      { id: 5, name: 'Chatbots y asistentes locales', description: 'Botpress corriendo en servidor local: integrado con sistemas de respaldo y eventos técnicos.', imageUrl: 'assets/imagenes/chatbot.jpg' },
+      { id: 6, name: 'Aplicaciones Web con Nginx como servidor de producción', description: 'Aplicaciones Web con Ngnx Nginx seirve estáticos + redirecciona a backend API para lógica', imageUrl: 'assets/imagenes/nginx.png' },
+      { id: 7, name: 'Sistema de Gestión de Inventario Inteligente (SGII)', description: 'Optimiza la gestión de stock para PYMES con seguimiento en tiempo real, automatización de pedidos y análisis predictivo de ventas para evitar pérdidas y mejorar la eficiencia.', imageUrl: 'assets/imagenes/sistemainteli.jpg' },
+      { id: 8, name: 'Plataforma Educativa Interactiva para Aprendizaje de Idiomas (PEILA)', description: 'Aplicación multiplataforma que ofrece un aprendizaje de idiomas inmersivo con lecciones gamificadas, práctica de pronunciación y chats con hablantes nativos.', imageUrl: 'assets/imagenes/educati.jpg' },
+      { id: 9, name: 'Herramienta de Visualización y Análisis de Datos Climáticos (VIDAC)', description: 'Software intuitivo para investigadores y entusiastas, permite visualizar y analizar datos climáticos históricos y en tiempo real con gráficos interactivos y proyecciones de tendencias.', imageUrl: 'assets/imagenes/analisisdedatos.jpg' },
     ];
 
     // Llama a checkLoadMoreButtonStatus para asegurar que el botón se muestre/oculte correctamente al inicio

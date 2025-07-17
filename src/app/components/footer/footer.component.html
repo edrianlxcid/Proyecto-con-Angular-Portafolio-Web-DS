@@ -1,6 +1,6 @@
 <!-- src/app/components/footer/footer.component.html -->
 <footer class="footer bg-dark text-white-50 py-4 shadow-lg mt-auto">
-  <div class="container-fluid text-center">
+  <div class="container-fluid">
     <div class="row align-items-center">
       <!-- Columna del Logo y Nombre -->
       <div class="col-md-4 mb-3 mb-md-0">
@@ -13,7 +13,7 @@
 
       <!-- Columna de Redes Sociales -->
       <div class="col-md-4 mb-3 mb-md-0">
-        <div class="social-icons">
+        <div class="social-icons text-center">
           <a href="https://www.instagram.com/" target="_blank" class="text-white-50 mx-2">
             <i class="bi bi-instagram"></i>
           </a>
@@ -26,9 +26,21 @@
         </div>
       </div>
 
-      <!-- Columna de Derechos de Autor -->
-      <div class="col-md-4 text-md-end">
-        <p class="mb-0">&copy; {{ currentYear }} DS Desarrollo de Software. Todos los derechos reservados.</p>
+      <!-- Columna derecha: textos alineados a la derecha -->
+      <div class="col-md-4 text-md-end text-center">
+        <p class="mb-0">Desarrollos DS - Proyecto Académico</p>
+        <p class="mb-0">
+          <a routerLink="/terminos" class="text-white-50 text-decoration-underline">
+            Política de privacidad | Términos
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright centrado abajo -->
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <p class="mb-0">&copy; {{ currentYear }} Todos los derechos reservados.</p>
       </div>
     </div>
   </div>
